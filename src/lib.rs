@@ -1,5 +1,7 @@
 use std::process;
 
+pub mod read;
+
 #[derive(Debug)]
 pub struct Config {
     pub filename: String,
