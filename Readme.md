@@ -10,3 +10,5 @@ Monitor Directory (New / Stand-out Feature):
 Watches a directory in real-time, printing a notification whenever files are created, modified, or deleted.
 Automatically reloads any file list or index if desired.
 Help Command: Provides usage information about available commands and flags.
+
+⚠️ There is a need to well comment the codebase for better developer experience.
