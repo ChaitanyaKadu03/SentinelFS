@@ -1,1 +1,0 @@
-The SentinelFS File Manager is a Command Line Interface (CLI) application written in Rust. It allows users to interact with files on their local system by supporting operations like reading file contents, writing text to files, listing files in a directory, deleting files, and—most notably—monitoring a directory for changes in real-time.

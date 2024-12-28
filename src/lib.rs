@@ -2,6 +2,8 @@ use std::process;
 
 pub mod read;
 pub mod write;
+pub mod list;
+pub mod delete;
 
 #[derive(Debug)]
 pub struct Config {
@@ -16,6 +18,8 @@ pub enum Command {
     Read,
     Write,
     List,
+    Delete,
+    
 }
 
 #[derive(Debug)]
@@ -78,10 +82,17 @@ impl Config {
                     return Err(println!("Kindly enter a valid operation."));
                 }
 
-            } else {
+            } else if command == "list" {
                 return Ok(Config {
                     filename,
                     command: Command::List,
+                    operation: None,
+                    input: None,
+                });
+            } else {
+                return Ok(Config {
+                    filename,
+                    command: Command::Delete,
                     operation: None,
                     input: None,
                 });
