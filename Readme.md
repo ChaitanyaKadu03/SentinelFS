@@ -11,4 +11,4 @@ Watches a directory in real-time, printing a notification whenever files are cre
 Automatically reloads any file list or index if desired.
 Help Command: Provides usage information about available commands and flags.
 
-⚠️ There is a need to well comment the codebase for better developer experience.
+⚠️⚠️⚠️ There is a need to well comment the codebase for better developer experience.

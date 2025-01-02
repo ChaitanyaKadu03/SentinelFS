@@ -4,6 +4,7 @@ pub mod read;
 pub mod write;
 pub mod list;
 pub mod delete;
+pub mod monitor;
 
 #[derive(Debug)]
 pub struct Config {
@@ -19,12 +20,12 @@ pub enum Command {
     Write,
     List,
     Delete,
-    
+    Monitor
 }
 
 #[derive(Debug)]
 pub enum Operation {
-    At_Line,
+    __,
     Replace,
     Prepend,
     Append,
@@ -89,10 +90,17 @@ impl Config {
                     operation: None,
                     input: None,
                 });
-            } else {
+            } else if command == "delete" {
                 return Ok(Config {
                     filename,
                     command: Command::Delete,
+                    operation: None,
+                    input: None,
+                });
+            } else {
+                return Ok(Config {
+                    filename,
+                    command: Command::Monitor,
                     operation: None,
                     input: None,
                 });

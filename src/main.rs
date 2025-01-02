@@ -1,3 +1,4 @@
+use monitor::monitor_dir;
 use sentinel_fs::*;
 use std::env;
 use sentinel_fs::read::read_file;
@@ -22,6 +23,9 @@ fn main() {
         },
         &Command::Delete => {
             delete_file(config);
+        },
+        &Command::Monitor => {
+            monitor_dir(config);
         }
     }
 

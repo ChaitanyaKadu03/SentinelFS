@@ -72,7 +72,7 @@ pub fn write_file(config: Config) -> () {
                     println!("Kindly provide some content. The inputs were {:#?}", config)
                 }
             },
-            Operation::At_Line => {
+            Operation::__ => {
                 //
             }
         },
